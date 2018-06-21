@@ -9,23 +9,23 @@ import Home from './Home';
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
+import MyCats from './MyCats';
 
 class App extends Component {
   render() {
-    return (
-      <div>
+    return <div>
         <NavBar />
         <Flash />
         <FetchUser>
           <Switch>
-            <ProtectedRoute exact path='/' component={Home} />
-            <AuthRoute exact path='/login' component={Login} />
-            <AuthRoute exact path='/register' component={Register} />
+            <ProtectedRoute exact path="/" component={Home} />
+            <ProtectedRoute exact path="/my_cats" component={MyCats} />
+            <AuthRoute exact path="/login" component={Login} />
+            <AuthRoute exact path="/register" component={Register} />
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
-      </div>
-    );
+      </div>;
   }
 }
 
