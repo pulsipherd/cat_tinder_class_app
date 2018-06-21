@@ -29,7 +29,7 @@ class Home extends Component {
       <Cards className="cards-root">
         {this.state.cats.map( cat =>
           <Card
-            key={cat.id}>
+            key={cat.id}
             onSwipeLeft={() => this.swipeLeft(cat.id) }
             onSwipeRight={() => this.swipeRight(cat.id) }
             >
